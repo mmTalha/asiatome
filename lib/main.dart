@@ -1,6 +1,20 @@
+import 'package:asiato/Dashboard/drawer.dart';
+import 'package:asiato/talha/menu.dart';
+import 'package:asiato/talha/orderprocessing.dart';
+import 'package:asiato/talha/profile.dart';
+import 'package:asiato/talha/ready_for_delivery.dart';
+
+import 'package:asiato/talha/view_order_map.dart';
+
 import 'package:flutter/material.dart';
 
+import 'Dashboard/Dashboard.dart';
+
 import 'onboarding/onboarding.dart';
+import 'talha/Order_list.dart';
+import 'talha/delivery_track.dart';
+import 'talha/upcomingrequest.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -11,14 +25,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Asia.to',
       theme: ThemeData(
+          fontFamily: 'Rubik',
           appBarTheme: AppBarTheme(
             elevation: 0.0,
             backgroundColor:Colors.white ,
             centerTitle: true,
 
           ) ,
+
         backgroundColor: Colors.white,
         // This is the theme of your application.
         //
@@ -31,7 +48,17 @@ class MyApp extends StatelessWidget {
         // is not restarted.
 
       ),
+      //home: screenn1(),
       home: onboarding_screen(),
+      //home: upcomingrequest(),
+      //home: orderprocessing(),
+      //home: ready_for_delivery(),
+      //home: view_order_map(),
+      //home: menu(),
+      //  home: delivery_track(),
+      //home: profile(),
+      //home: Order_list(),
+      //home: drawer(),
     );
   }
 }

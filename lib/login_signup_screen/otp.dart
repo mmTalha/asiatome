@@ -1,5 +1,7 @@
 import 'package:asiato/Dashboard/Dashboard.dart';
 import 'package:asiato/login_signup_screen/signin.dart';
+import 'package:asiato/talha/delivery_track.dart';
+
 import 'package:asiato/widget/button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -86,7 +88,7 @@ class otp_screen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            Dashboard_screen()),
+                            delivery_track()),
                   );
                 },
               ),
@@ -103,7 +105,7 @@ class otp_screen extends StatelessWidget {
                   TextSpan(
                     text: "Resend Again.",
                     style: TextStyle(
-                      color: Colors.red,
+                        color: Color(0xffC61820),
                       fontSize: 12
                     ),
                     recognizer: TapGestureRecognizer()

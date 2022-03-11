@@ -38,7 +38,7 @@ class CustomButton extends StatelessWidget {
       width: 220,
       child: MaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        color: Colors.red,
+        color: Color(0xffC61820),
         child: Text(
           name,
           style: TextStyle(
@@ -74,7 +74,7 @@ class onboardingbutton extends StatelessWidget {
           name,
           style: TextStyle(
             fontFamily: 'Roboto',
-            color: Colors.red,
+            color: Color(0xffC61820),
             fontWeight: FontWeight.w400,
             fontSize: 14,
           ),

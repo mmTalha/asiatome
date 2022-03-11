@@ -66,7 +66,7 @@ class _create_acount_screenState extends State<create_acount_screen> {
                     TextSpan(
                       text: "Already have account? ",
                       style: TextStyle(
-                        color: Colors.red,
+                        color: Color(0xffC61820),
                         fontSize: 16,
                       ),
                       recognizer: TapGestureRecognizer()
@@ -191,10 +191,10 @@ class _create_acount_screenState extends State<create_acount_screen> {
                               )),
                           errorBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(color: Colors.red)),
+                              borderSide: BorderSide( color: Color(0xffC61820),)),
                           focusedErrorBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(color: Colors.red))),
+                              borderSide: BorderSide(color: Color(0xffC61820),))),
                     ),
                   ),
                   SizedBox(

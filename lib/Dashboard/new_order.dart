@@ -1,11 +1,40 @@
 import 'package:asiato/details/order_details.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class new_order extends StatelessWidget {
   const new_order({Key? key}) : super(key: key);
+  void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {}
+  //   /// The argument value will return the changed date as [DateTime] when the
+  //   /// widget [SfDateRangeSelectionMode] set as single.
+  //   ///
+  //   /// The argument value will return the changed dates as [List<DateTime>]
+  //   /// when the widget [SfDateRangeSelectionMode] set as multiple.
+  //   ///
+  //   /// The argument value will return the changed range as [PickerDateRange]
+  //   /// when the widget [SfDateRangeSelectionMode] set as range.
+  //   ///
+  //   /// The argument value will return the changed ranges as
+  //   /// [List<PickerDateRange] when the widget [SfDateRangeSelectionMode] set as
+  //   /// multi range.
+  //   setState(() {
+  //     // if (args.value is PickerDateRange) {
+  //     //   _range = '${DateFormat('dd/MM/yyyy').format(args.value.startDate)} -'
+  //     //       // ignore: lines_longer_than_80_chars
+  //     //       ' ${DateFormat('dd/MM/yyyy').format(args.value.endDate ?? args.value.startDate)}';
+  //     // } else if (args.value is DateTime) {
+  //     //   _selectedDate = args.value.toString();
+  //     // } else if (args.value is List<DateTime>) {
+  //     //   _dateCount = args.value.length.toString();
+  //     // } else {
+  //     //   _rangeCount = args.value.length.toString();
+  //     // }
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -27,6 +56,7 @@ class new_order extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween
@@ -34,7 +64,7 @@ class new_order extends StatelessWidget {
                         children: [
                           Text('Cameron Williamson',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16),),
                           SizedBox(height:30,),
-                          Text('New Order',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: Colors.red),)
+                          Text('New Order',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,color: Color(0xffC61820),),)
                         ],
                       ),
                  Row(

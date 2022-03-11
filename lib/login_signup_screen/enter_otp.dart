@@ -4,15 +4,17 @@ import 'package:asiato/widget/button.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
+
 class phone_number_screen extends StatelessWidget {
   const phone_number_screen({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text('Sign In'),
+          title: Text('Sign In',style: TextStyle(color: Colors.black),),
           leading: IconButton(
             icon: Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () => Navigator.of(context).pop(),
@@ -52,14 +54,16 @@ class phone_number_screen extends StatelessWidget {
                 width: 334,
                 height: 70,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 1, right: 30),
+                  padding: const EdgeInsets.only(left: 10, right: 10),
                   child: IntlPhoneField(
+                    flagsButtonPadding: EdgeInsets.only(bottom: 5.0),
                     decoration: InputDecoration(
                       labelText: 'Phone Number',
                       border: OutlineInputBorder(
                         borderSide: BorderSide(),
                       ),
                     ),
+
                     initialCountryCode: 'IN',
                     onChanged: (phone) {
                       print(phone.completeNumber);

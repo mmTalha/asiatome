@@ -12,16 +12,19 @@ class drawer extends StatelessWidget {
     return Scaffold(
       body:  ListView(
           children: [
-            SafeArea(
-              child: Container(
-                height: 150,
-                color: Colors.red,
-                child: Center(
-                    child: Text(
-                      'Hi there!',
-                      style:  TextStyle(
-                          fontFamily: 'Roboto', color: Colors.white, fontSize: 20),
-                    )),
+            Container(
+              height: 80 ,
+              width: 200,
+              color: Color(0xffBC1C23),
+              child: ListTile(
+                //leading: Image(image: AssetImage('images/smile.png'),),
+                leading: Container(
+                  height: 50.0,
+                  width: 50.0,
+                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/smile.png')),color: Colors.white,borderRadius: BorderRadius.circular(30.0)),
+                ),
+                title: Text('Hi there!',style: TextStyle(fontSize: 16.0,fontWeight:FontWeight.bold,color: Colors.white),),
+                subtitle: Text('View personal information',style: TextStyle(fontSize: 8.0,color: Colors.white,decoration: TextDecoration.underline),),
               ),
             ),
             Container(
@@ -50,7 +53,7 @@ class drawer extends StatelessWidget {
                     children: [
                       Icon(
                           Icons. favorite,
-                          color: Colors.black
+                          color: Colors.black,size: 18,
                       ),
                       Text(
                         'Order History',
@@ -87,9 +90,10 @@ class drawer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
-                          Icons. wallet_giftcard,
+                            Icons.account_balance_outlined,
                           color: Colors.black
                       ),
+                      SizedBox(width: 5,),
                       Text(
                         'My Finance',
                         style: TextStyle(
@@ -124,8 +128,8 @@ class drawer extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                          Icons.help,
+                    Icon(
+                    Icons.headset_mic_outlined,
                           color: Colors.black
                       ),
                       Text(
@@ -200,10 +204,11 @@ class drawer extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                          Icons.logout,
+                    Icon(
+                    Icons.exit_to_app_rounded,
                           color: Colors.black
                       ),
+                      SizedBox(width: 20.0,),
                       Text(
                         'Signout',
                         style: TextStyle(

@@ -24,42 +24,53 @@ class my_fiance extends StatelessWidget {
           ),
         ),
         body: SingleChildScrollView(
-          child: ConstrainedBox(
-            constraints: BoxConstraints(
-              maxHeight: MediaQuery.of(context).size.height,
-            ),
-            child: Container(
-              padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    decoration: new BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(10)),
-                    width: MediaQuery.of(context).size.width,
-                    height: 50,
-                    child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 15),
-                          child: Text(
-                            'Today',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        )),
-                  ),
+          child: Container(
+            padding: EdgeInsets.only( bottom: 10),
+            height: MediaQuery.of(context).size.height*1.35,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 25.0),
+                  child: Text('My Finance',style: TextStyle(fontSize: 27,fontWeight: FontWeight.bold),),
+                ),
+                SizedBox(height: 20.0,),
+                Container(
+                  decoration: new BoxDecoration(
+                      color: Color(0xffBC1C23),
+                      ),
+                  width: MediaQuery.of(context).size.width,
+                  height: 50,
+                  child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 25),
+                        child: Text(
+                          'Today',
+                          style: TextStyle(color: Colors.white,fontSize: 18.0,fontWeight: FontWeight.w500),
+                        ),
+                      )),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 20, right: 20, bottom: 10),
+                  height: MediaQuery.of(context).size.height*1.2,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 0.0,),
                   Container(
                     padding: EdgeInsets.all(10),
                     height: 80,
                     width: 150,
                     decoration: new BoxDecoration(
-                        color: Color.fromRGBO(244, 244, 244, 1
-
-                        ),
-                        borderRadius: BorderRadius.circular(10)),
+                        color: Color.fromRGBO(244, 244, 244, 1),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.black)
+                    ),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Today'),
@@ -71,16 +82,20 @@ class my_fiance extends StatelessWidget {
                       ],
                     ),
                   ),
-                  for (var i = 0; i < 6; i++)
+                      //SizedBox(height: 10.0,),
+                  for (var i = 0; i <= 6; i++)
+
                     Container(
                       padding: EdgeInsets.all(10),
                       height: 90,
                       width: MediaQuery.of(context).size.width,
                       decoration: new BoxDecoration(
                           color: Color.fromRGBO(244, 244, 244, 1),
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(10),
+                      boxShadow:kElevationToShadow[3],
+                         ),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Row(
                             children: [
@@ -135,8 +150,10 @@ class my_fiance extends StatelessWidget {
                         ],
                       ),
                     ),
-                ],
-              ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ));

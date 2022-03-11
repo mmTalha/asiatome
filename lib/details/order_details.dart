@@ -311,7 +311,7 @@ class order_details extends StatelessWidget {
                       child: MaterialButton(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        color: Colors.red,
+                        color: Color(0xffC61820),
                         child: Text(
                           'PRINT',
                           style: TextStyle(
@@ -336,7 +336,7 @@ class order_details extends StatelessWidget {
                       child: MaterialButton(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        color: Colors.green,
+                        color: Color(0xff34A853),
                         child: Text(
                           'Call',
                           style: TextStyle(

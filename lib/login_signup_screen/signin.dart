@@ -66,7 +66,7 @@ class _login_screenState extends State<login_screen> {
                       text: " Create new account. ",
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.red,
+                        color: Color(0xffC61820),
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
@@ -111,10 +111,10 @@ class _login_screenState extends State<login_screen> {
                                 )),
                             errorBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: Colors.red)),
+                                borderSide: BorderSide(color: Color(0xffC61820),)),
                             focusedErrorBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: Colors.red))),
+                                borderSide: BorderSide(color: Color(0xffC61820),))),
                       ),
                     ),
                   ),
@@ -247,6 +247,7 @@ class _login_screenState extends State<login_screen> {
                       ),
                       child: Container(
                         child: ListTile(
+                          minVerticalPadding: 0,
                           title: Text(
                             'Connects with Goggle',
                             style: TextStyle(
@@ -256,7 +257,7 @@ class _login_screenState extends State<login_screen> {
                           ),
                           leading: Icon(
                             FontAwesomeIcons.google,
-                            color: Colors.white,
+                            color: Colors.white,size: 20.0,
                           ),
                         ),
                       ),

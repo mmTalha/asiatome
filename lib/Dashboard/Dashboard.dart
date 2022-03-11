@@ -2,8 +2,10 @@ import 'package:asiato/Dashboard/drawer.dart';
 import 'package:asiato/Dashboard/order_processing.dart';
 import 'package:asiato/Dashboard/ready_for_delivery.dart';
 import 'package:asiato/Dashboard/upcoming_request.dart';
+import 'package:asiato/talha/newOrder.dart';
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 import 'new_order.dart';
 
@@ -36,6 +38,7 @@ class _Dashboard_screenState extends State<Dashboard_screen> {
 
   @override
   Widget build(BuildContext context) {
+
     return DefaultTabController(
       length: 4,
 
@@ -43,7 +46,7 @@ class _Dashboard_screenState extends State<Dashboard_screen> {
         backgroundColor: Colors.white,
 
         appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.red),
+          iconTheme: IconThemeData(color: Color(0xffC61820),),
           title: Text(
             'Today s Order List  ',
             style: TextStyle(
@@ -58,9 +61,9 @@ class _Dashboard_screenState extends State<Dashboard_screen> {
               indicatorSize: TabBarIndicatorSize.  tab ,
               indicator: BoxDecoration(
                   gradient: LinearGradient(
-                      colors: [Colors.redAccent, Colors.redAccent]),
+                      colors: [Color(0xffC61820), Color(0xffC61820),]),
                   borderRadius: BorderRadius.circular(50),
-                  color: Colors.redAccent),
+                color: Color(0xffC61820),),
               tabs: [
                 Tab(
                   child: Text("New Order",style: TextStyle(fontSize: 10)),
@@ -106,6 +109,7 @@ class _Dashboard_screenState extends State<Dashboard_screen> {
 
 
             children: [
+
               new_order(),
               new_order(),
               new_order(),
